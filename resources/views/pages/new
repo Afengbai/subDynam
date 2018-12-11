@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="{{ config('app.locale') }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+
+    <title>{{ config('app.name', 'BLOGGER')}}</title>
+
+
+
+</head>
+<body>
+
+    @include ('inc.navbar')
+
+    <div class="container p-5">
+
+    @include('inc.messages')
+    @yield('content')
+
+    </div>
+
+
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
+
+
+</body>
+</html>
+
+
+<form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
