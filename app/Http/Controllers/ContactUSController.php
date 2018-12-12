@@ -28,7 +28,7 @@ class ContactUSController extends Controller
 
         Mail::send('pages.email', $data, function($message) use ($name,$email){
             $message->to($email,$name)->subject('Do not-reply');
-            $message->from('adewalefakeye@gmail.com','Admin');
+            $message->from('afengbai2@yahoo.com','Admin');
         });
 
         return redirect("/contact-us")->with('sent', "Message Sent");
